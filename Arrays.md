@@ -54,6 +54,33 @@ Associative arrays provide a mechanism to use arbitrary data types as an index, 
   my_assoc_array["key"] = 100; // Associative array indexed by string
   ```
 
+  - **Further example:**
+    ```systemverilog
+    module associative_array_example;
+      Declare an associative array indexed by integers
+      int associative_array[int];
+
+      // Declare an associative array indexed by strings
+      int associative_string_array[string];
+
+      initial begin
+        // Assign values to the integer-indexed associative array
+        associative_array[10] = 100;
+        associative_array[20] = 200;
+
+        // Assign values to the string-indexed associative array
+        associative_string_array["first"] = 1;
+        associative_string_array["second"] = 2;
+
+        // Display the values
+        $display("associative_array[10] = %0d", associative_array[10]);   // Output: 100
+        $display("associative_array[20] = %0d", associative_array[20]);   // Output: 200
+
+        $display("associative_string_array['first'] = %0d", associative_string_array["first"]);  // Output: 1
+        $display("associative_string_array['second'] = %0d", associative_string_array["second"]); // Output: 2
+       end
+    endmodule
+
 #### Key Points:
 - Great for sparse data storage, where not all indexes need to be contiguous.
 - Keys can be `int`, `string`, or `class` objects.
