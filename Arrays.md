@@ -57,7 +57,7 @@ Associative arrays provide a mechanism to use arbitrary data types as an index, 
   - **Further example:**
     ```systemverilog
     module associative_array_example;
-      Declare an associative array indexed by integers
+      // Declare an associative array indexed by integers
       int associative_array[int];
 
       // Declare an associative array indexed by strings
